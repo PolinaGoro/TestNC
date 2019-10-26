@@ -1,4 +1,4 @@
-package com.netcraker.backend;
+package com.netcracker.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
