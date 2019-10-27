@@ -12,9 +12,14 @@ import java.util.List;
 public class MainController {
 
     @RequestMapping("/users")
-    public List<User> getUser(@RequestParam (value = "name",
-            defaultValue = "World") String name){
+    public List<User> getUser(
+            @RequestParam (value = "name", defaultValue = "World") String name
+    ){
         UserRepository userRepository = new UserRepository();
-        return userRepository.getAll();
+        List<User> all = userRepository.getAll();
+        User user = new User();
+        user.setNickname(name);
+        all.add(user);
+        return all;
     }
 }

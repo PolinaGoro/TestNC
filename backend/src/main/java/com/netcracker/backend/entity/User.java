@@ -1,33 +1,29 @@
 package com.netcracker.backend.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table
 public class User {
-    public User(){
-        User user = new User("", "")
-                .setIdUser(2)
-                .setEmail("");
-    }
-    public User(String nickname, String password) {
-        this.nickname = nickname;
-        this.password = password;
-    }
 
-    private int idUser;
+    @Id
+    private long idUser;
     private String nickname;
     private String firstname;
     private String secondname;
     private boolean isAdmin;
     private String aboutYourself;
+    private String password;
+    private String status;
+    private String email;
 
-    public int getIdUser() {
+    public long getIdUser() {
         return idUser;
     }
 
-    public User setIdUser(int idUser) {
+    public User setIdUser(long idUser) {
         this.idUser = idUser;
         return this;
     }
@@ -103,9 +99,5 @@ public class User {
         this.email = email;
         return this;
     }
-
-    private String password;
-    private String status;
-    private String email;
 
 }
