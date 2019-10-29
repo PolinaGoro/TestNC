@@ -5,8 +5,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
-public class User {
+@Table(name = "user")
+public class UserProfile {
 
     @Id
     private long idUser;
@@ -23,7 +23,7 @@ public class User {
         return idUser;
     }
 
-    public User setIdUser(long idUser) {
+    public UserProfile setIdUser(long idUser) {
         this.idUser = idUser;
         return this;
     }
@@ -32,7 +32,7 @@ public class User {
         return nickname;
     }
 
-    public User setNickname(String nickname) {
+    public UserProfile setNickname(String nickname) {
         this.nickname = nickname;
         return this;
     }
@@ -41,7 +41,7 @@ public class User {
         return firstname;
     }
 
-    public User setFirstname(String firstname) {
+    public UserProfile setFirstname(String firstname) {
         this.firstname = firstname;
         return this;
     }
@@ -50,7 +50,7 @@ public class User {
         return secondname;
     }
 
-    public User setSecondname(String secondname) {
+    public UserProfile setSecondname(String secondname) {
         this.secondname = secondname;
         return this;
     }
@@ -59,7 +59,7 @@ public class User {
         return isAdmin;
     }
 
-    public User setAdmin(boolean admin) {
+    public UserProfile setAdmin(boolean admin) {
         isAdmin = admin;
         return this;
     }
@@ -68,7 +68,7 @@ public class User {
         return aboutYourself;
     }
 
-    public User setAboutYourself(String aboutYourself) {
+    public UserProfile setAboutYourself(String aboutYourself) {
         this.aboutYourself = aboutYourself;
         return this;
     }
@@ -77,7 +77,7 @@ public class User {
         return password;
     }
 
-    public User setPassword(String password) {
+    public UserProfile setPassword(String password) {
         this.password = password;
         return this;
     }
@@ -86,7 +86,7 @@ public class User {
         return status;
     }
 
-    public User setStatus(String status) {
+    public UserProfile setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -95,7 +95,7 @@ public class User {
         return email;
     }
 
-    public User setEmail(String email) {
+    public UserProfile setEmail(String email) {
         this.email = email;
         return this;
     }

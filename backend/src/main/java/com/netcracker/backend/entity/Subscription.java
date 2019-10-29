@@ -5,10 +5,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "subcription")
 public class Subscription {
     @Id
     private long idUser;
+
     private long hisSub;
     private long inHimSub;
 

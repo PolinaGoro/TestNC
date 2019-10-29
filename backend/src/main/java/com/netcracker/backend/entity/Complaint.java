@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "complaint")
 public class Complaint {
     @Id
     private long idComplaint;

@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "hashtag_has_post")
 public class HashtagHasPost {
     private String hashTag;
     private long idPost;
